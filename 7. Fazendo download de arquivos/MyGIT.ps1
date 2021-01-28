@@ -45,7 +45,7 @@ try {
     Invoke-WebRequest -Uri "$urlDownload" -OutFile "$arquivoDownload"
     # Descompacta para a pasta que criamos
     Write-Host "Descompactando.."
-    Expand-Archive -Path "$arquivoDownload" -DestinationPath "$pastaMyGIT"
+    Expand-Archive -Path "$arquivoDownload" -DestinationPath "$pastaMyGIT" -Force
     # Limpa a instalacao
     Write-Host "Otimizando armazenamento.."
     Remove-Item -Path "$arquivoDownload" -Force
